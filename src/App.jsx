@@ -81,7 +81,7 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto mt-4">
+    <div className="container mx-auto mt-7">
       <h3 className="text-2xl">Jadwal Shalat</h3>
       <h2 className="text-4xl font-semibold">
         {selectedCity ? selectedCity : ""}
