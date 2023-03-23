@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [states, setStates] = useState([]);
   const [selectedState, setSelectedState] = useState("Banten");
   const [cities, setCities] = useState([]);
   const [selectedCity, setSelectedCity] = useState("Kab. Tangerang");
   const [schedule, setSchedule] = useState([]);
   const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    console.log(isDarkMode);
+  }, [isDarkMode]);
 
   useEffect(() => {
     getStates();
@@ -59,7 +64,9 @@ export default function App() {
         }
       );
       setCities(data.data);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getSchedules = async () => {
@@ -83,19 +90,38 @@ export default function App() {
         .toISOString()
         .slice(0, 10);
       setSchedule(jadwal[today]);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleThemeToggle = (e) => {
+    setIsDarkMode((prevState) => !prevState);
+    const html = document.querySelector("html");
+    html.classList.toggle("dark");
   };
 
   return (
     <>
       <div className="container mx-auto mt-7">
-        <h3 className="text-xl">Jadwal Shalat</h3>
-        <h2 className="text-4xl font-semibold">
+        <div className="flex justify-between items-center">
+          <h3 className="text-xl dark:text-white">Jadwal Shalat</h3>
+          <button
+            type="button"
+            className={`dark:text-[#2C3333] text-white text-sm cursor-pointer bg-[#2C3333] dark:bg-white px-3 py-2 rounded-lg shadow`}
+            onClick={handleThemeToggle}
+          >
+            {isDarkMode ? "Light Mode" : "Dark Mode"}
+          </button>
+        </div>
+        <h2 className="text-4xl font-semibold dark:text-white mt-3">
           {selectedCity ? selectedCity : ""}
         </h2>
         <form className="mt-5 lg:mt-8 flex flex-col lg:flex-row gap-3">
           <div className="w-full">
-            <label htmlFor="state">Provinsi</label>
+            <label htmlFor="state" className="dark:text-white">
+              Provinsi
+            </label>
             <select
               id="state"
               className="w-full h-10 px-3 py-2 mt-2 focus:ring-1 focus:ring-slate-400 rounded outline-none shadow text-sm font-semibold font-comforta"
@@ -111,7 +137,9 @@ export default function App() {
             </select>
           </div>
           <div className="w-full">
-            <label htmlFor="city">Kabupaten / Kota</label>
+            <label htmlFor="city" className="dark:text-white">
+              Kabupaten / Kota
+            </label>
             <select
               id="city"
               className="w-full h-10 px-3 py-2 mt-2 focus:ring-1 focus:ring-slate-400 rounded outline-none shadow text-sm font-semibold font-comforta"
@@ -127,7 +155,7 @@ export default function App() {
             </select>
           </div>
         </form>
-        <p className="my-5 text-xl font-semibold font-comforta lg:text-left text-center">
+        <p className="my-5 text-xl font-semibold font-comforta lg:text-left text-center dark:text-white">
           {schedule ? schedule.tanggal : null} |{" "}
           {schedule ? time.toLocaleTimeString() : null}
         </p>
@@ -184,7 +212,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <footer className="text-center mt-10 py-4 border-t border-slate-200">
+      <footer className="text-center dark:text-white mt-10 py-4 border-t border-slate-200">
         <p>
           Made with ❤️ by{" "}
           <a
