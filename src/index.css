@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#f0f0f0] pb-10;
+  @apply bg-[#f0f0f0] pb-10 lg:overflow-y-hidden;
 }
