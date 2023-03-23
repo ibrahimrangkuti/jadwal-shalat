@@ -105,10 +105,16 @@ export default function App() {
     <>
       <div className="container mx-auto mt-7">
         <div className="flex justify-between items-center">
-          <h3 className="text-xl dark:text-white">Jadwal Shalat</h3>
+          <a
+            href="https://ibrahimrangkuti.github.io/jadwal-shalat"
+            target="_blank"
+            className="text-xl dark:text-white"
+          >
+            Jadwal Shalat
+          </a>
           <button
             type="button"
-            className={`dark:text-[#2C3333] text-white text-sm cursor-pointer bg-[#2C3333] dark:bg-white px-3 py-2 rounded-lg shadow`}
+            className={`dark:text-[#2C3333] text-white text-sm cursor-pointer bg-[#2C3333] dark:bg-white px-3 py-2 rounded-lg shadow-lg`}
             onClick={handleThemeToggle}
           >
             {isDarkMode ? "Light Mode" : "Dark Mode"}
@@ -160,50 +166,50 @@ export default function App() {
           {schedule ? time.toLocaleTimeString() : null}
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-5">
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Imsak</h2>
               <span className="text-4xl font-semibold">{schedule.imsak}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Subuh</h2>
               <span className="text-4xl font-semibold">{schedule.subuh}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Terbit</h2>
               <span className="text-4xl font-semibold">{schedule.terbit}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Dhuha</h2>
               <span className="text-4xl font-semibold">{schedule.dhuha}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Dzuhur</h2>
               <span className="text-4xl font-semibold">{schedule.dzuhur}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Ashar</h2>
               <span className="text-4xl font-semibold">{schedule.ashar}</span>
             </div>
           </div>
-          <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border">
+          <div className="bg-white w-full h-40 p-6 rounded-lg flex items-center card-border">
             <div>
               <h2 className="text-xl">Maghrib</h2>
               <span className="text-4xl font-semibold">{schedule.maghrib}</span>
             </div>
           </div>
           <div
-            className={`bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center card-border`}
+            className={`bg-white w-full h-40 p-6 rounded-lg flex items-center card-border`}
           >
             <div>
               <h2 className="text-xl">Isya</h2>
