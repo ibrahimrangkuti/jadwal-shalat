@@ -125,49 +125,49 @@ export default function App() {
         {schedule ? time.toLocaleTimeString() : null}
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-5">
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Imsak</h2>
             <span className="text-4xl font-semibold">{schedule.imsak}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Subuh</h2>
             <span className="text-4xl font-semibold">{schedule.subuh}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Terbit</h2>
             <span className="text-4xl font-semibold">{schedule.terbit}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Dhuha</h2>
             <span className="text-4xl font-semibold">{schedule.dhuha}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Dzuhur</h2>
             <span className="text-4xl font-semibold">{schedule.dzuhur}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Ashar</h2>
             <span className="text-4xl font-semibold">{schedule.ashar}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Maghrib</h2>
             <span className="text-4xl font-semibold">{schedule.maghrib}</span>
           </div>
         </div>
-        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center">
+        <div className="bg-white w-full h-40 p-6 rounded-lg shadow-md flex items-center hover:ring-1 ring-slate-400">
           <div>
             <h2 className="text-xl">Isya</h2>
             <span className="text-4xl font-semibold">{schedule.isya}</span>
