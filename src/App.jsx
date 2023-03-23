@@ -16,6 +16,9 @@ export default function App() {
       updateTime();
     }, 1000);
 
+    const today = new Date().toISOString().slice(0, 10);
+    console.log(today);
+
     return () => {
       clearInterval(intervalId);
     };
@@ -74,8 +77,11 @@ export default function App() {
         }
       );
       const jadwal = data.data.data;
-      const today = new Date().toISOString().slice(0, 10);
-      // console.log(jadwal[today]);
+      let currentDate = new Date();
+      let offset = currentDate.getTimezoneOffset() / -60;
+      let today = new Date(currentDate.getTime() + offset * 3600 * 1000)
+        .toISOString()
+        .slice(0, 10);
       setSchedule(jadwal[today]);
     } catch (error) {}
   };
