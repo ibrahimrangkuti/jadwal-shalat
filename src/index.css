@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-[#f0f0f0] pb-10 lg:overflow-y-hidden;
+  @apply bg-[#f0f0f0] pb-10 lg:overflow-y-hidden font-ibm;
+}
+
+.card-border {
+  border: 2px solid black;
+  box-shadow: 7px 7px;
 }

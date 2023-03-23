@@ -13,6 +13,10 @@ module.exports = {
         "2xl": "6rem",
       },
     },
+    fontFamily: {
+      ibm: ["IBM Plex Mono"],
+      comforta: ["Comfortaa"],
+    },
   },
   plugins: [],
 };
