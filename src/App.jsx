@@ -120,10 +120,10 @@ export default function App() {
             {isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </div>
-        <h2 className="text-4xl font-semibold dark:text-white mt-3">
+        <h2 className="text-4xl font-semibold dark:text-white mt-3 mb-2">
           {selectedCity ? selectedCity : ""}
         </h2>
-        <span className="text-lg">
+        <span className="text-lg dark:text-white">
           Provinsi {selectedState ? selectedState : ""}
         </span>
         <form className="mt-5 lg:mt-8 flex flex-col lg:flex-row gap-3">
