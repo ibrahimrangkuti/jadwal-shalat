@@ -95,8 +95,8 @@ export default function App() {
     }
   };
 
-  const handleThemeToggle = (e) => {
-    setIsDarkMode((prevState) => !prevState);
+  const handleThemeToggle = () => {
+    setIsDarkMode(!isDarkMode);
     const html = document.querySelector("html");
     html.classList.toggle("dark");
   };
@@ -123,6 +123,9 @@ export default function App() {
         <h2 className="text-4xl font-semibold dark:text-white mt-3">
           {selectedCity ? selectedCity : ""}
         </h2>
+        <span className="text-lg">
+          Provinsi {selectedState ? selectedState : ""}
+        </span>
         <form className="mt-5 lg:mt-8 flex flex-col lg:flex-row gap-3">
           <div className="w-full">
             <label htmlFor="state" className="dark:text-white">
